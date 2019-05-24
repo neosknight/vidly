@@ -8,7 +8,20 @@ namespace Vidly.Controllers
 {
     public class MovieController : Controller
     {
-        // GET: Movies
+        List<Movie> Movies = new List<Movie>()
+        {
+            new Movie { Id = 1, Name = "Matrix" },
+            new Movie { Id = 2, Name = "Kill Bil" }
+        };
+
+        public ActionResult Index()
+        {
+            var viewModel = new MoviesViewModel { Movies = Movies };
+
+            return View(viewModel);
+        }
+
+        // GET: Movie/Random
         public ActionResult Random()
         {
             var movie = new Movie() { Id = 1, Name = "Kill Bill" };
