@@ -10,16 +10,18 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
-        List<Customer> Customers = new List<Customer>
+        private ApplicationDbContext _context;
+        public CustomersController()
         {
-            new Customer { Id = 1, Name = "John Smith" },
-            new Customer { Id = 2, Name = "Jane Doe" }
-        };
+            _context = new ApplicationDbContext();
+        }
 
         // GET: Customers
         public ActionResult Index()
         {
-            var viewModel = new CustomersViewModel() { Customers = Customers };
+            var customers = _context.Customers.ToList();
+            
+            var viewModel = new CustomersViewModel() { Customers = customers };
             return View(viewModel);
         }
 
@@ -27,7 +29,7 @@ namespace Vidly.Controllers
         {
             Customer customer = null;
 
-            foreach (var c in Customers)
+            foreach (var c in _context.Customers)
             {
                 if (c.Id == id)
                     customer = c;
