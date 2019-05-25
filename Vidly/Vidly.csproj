@@ -200,8 +200,21 @@
     <Compile Include="Migrations\201905251016083_SetCustomerBirthDateNullable.Designer.cs">
       <DependentUpon>201905251016083_SetCustomerBirthDateNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905251046097_AddGenre.cs" />
+    <Compile Include="Migrations\201905251046097_AddGenre.Designer.cs">
+      <DependentUpon>201905251046097_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905251105549_ChangeGenreIdToByte.cs" />
+    <Compile Include="Migrations\201905251105549_ChangeGenreIdToByte.Designer.cs">
+      <DependentUpon>201905251105549_ChangeGenreIdToByte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905251108595_PopulateGenres.cs" />
+    <Compile Include="Migrations\201905251108595_PopulateGenres.Designer.cs">
+      <DependentUpon>201905251108595_PopulateGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -252,6 +265,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -299,6 +313,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905251016083_SetCustomerBirthDateNullable.resx">
       <DependentUpon>201905251016083_SetCustomerBirthDateNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905251046097_AddGenre.resx">
+      <DependentUpon>201905251046097_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905251105549_ChangeGenreIdToByte.resx">
+      <DependentUpon>201905251105549_ChangeGenreIdToByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905251108595_PopulateGenres.resx">
+      <DependentUpon>201905251108595_PopulateGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

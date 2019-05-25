@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
@@ -23,10 +24,26 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-            var movies = _context.Movies.ToList();
+            var movies = _context.Movies.Include(c => c.Genre).ToList();
             var viewModel = new MoviesViewModel { Movies = movies };
 
             return View(viewModel);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var movie = _context.Movies
+                        .Include(m => m.Genre)
+                        .FirstOrDefault(m => m.Id == id);
+
+            if(movie == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(movie);
+            }
         }
 
         // GET: Movie/Random
