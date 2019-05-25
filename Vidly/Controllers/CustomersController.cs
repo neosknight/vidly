@@ -35,8 +35,9 @@ namespace Vidly.Controllers
         private Customer FindCustomerById(int id)
         {
             Customer customer = null;
+            var customers = _context.Customers.Include(c => c.MembershipType);
 
-            foreach (var c in _context.Customers)
+            foreach (var c in customers)
             {
                 if (c.Id == id)
                     customer = c;
