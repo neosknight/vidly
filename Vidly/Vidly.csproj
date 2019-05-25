@@ -184,6 +184,14 @@
     <Compile Include="Migrations\201905250832209_AddMoviesModel.Designer.cs">
       <DependentUpon>201905250832209_AddMoviesModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905250921049_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201905250921049_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201905250921049_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905250922124_UpdateMembershipTypeNames.cs" />
+    <Compile Include="Migrations\201905250922124_UpdateMembershipTypeNames.Designer.cs">
+      <DependentUpon>201905250922124_UpdateMembershipTypeNames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -271,6 +279,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905250832209_AddMoviesModel.resx">
       <DependentUpon>201905250832209_AddMoviesModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905250921049_AddNameToMembershipType.resx">
+      <DependentUpon>201905250921049_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905250922124_UpdateMembershipTypeNames.resx">
+      <DependentUpon>201905250922124_UpdateMembershipTypeNames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
